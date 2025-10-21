@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 위 메뉴</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    
+    .item-bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url('./p4.png') center/cover no-repeat;
+      z-index: 0; 
+    }
+
+    
+    .menu {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      z-index: 10; 
+    }
+
+    .menu a {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 2px solid #2D2D2D;
+      border-radius: 50px;
+      color: #2D2D2D;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+  
+    .bottom-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      border: 2px solid #2D2D2D;
+      border-radius: 50px;
+      padding: 8px 22px;
+      font-size: 18px;
+      color: #2D2D2D;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      z-index: 10; 
+    }
+
+    .bottom-btn:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    h4 {
+  position: absolute;
+  top: 30%;            
+  left: 10%;           
+  width: 40%;          
+  font-size: 16px;
+  line-height: 1.6;   
+  color: #2D2D2D;         
+  font-weight: 450;
+  z-index: 10;         
+}
+
+ h2 {
+  position: absolute;
+  bottom: 10%;            
+  left: 9.5%;           
+  width: 40%;          
+  font-size: 40px;
+  line-height: 1.6;    
+  color: #2D2D2D;        
+  font-weight: 900;
+  z-index: 10;         
+}
+
+.img1 {
+  position: absolute;
+  top: 25%;           
+  left: 47.5%;         
+  width: 383px;       
+  height: 510px;      
+  object-fit: cover;  
+  border: none;
+  z-index: 5;
+}
+
+.vid2 {
+  position: absolute;
+  top: 25%;           
+  left: 71.5%;          
+  width: 347px;
+  height: 547px;
+  object-fit: cover;  
+  border: none;
+  z-index: 5;
+}
+
+  </style>
+</head>
+<body>
+ <div class="item-bg">
+    <nav class="menu">
+      <a href="index2.html">Beginning</a>
+      <a href="index3.html">First Steps</a>
+      <a href="index4.html">Journey1</a>
+      <a href="index5.html">Journey2</a>
+      <a href="index6.html">Yet to come</a>
+    </nav>
+
+    <a href="index.html" class="bottom-btn">main →</a>
+    <h4> 어김없이 학원에 3시간씩 있던 어느날..<br>
+갑자기 나가서 치킨이 먹고싶다는 생각이 문득 들었다.<br>
+<br>
+문제를 풀고 있었지만,<br>
+<s>시험이 얼마 남지 않았지만, 난 지금 고3이지만......</<br>
+그저 내 머릿속엔...<br>
+치킨들이 춤을 추고 있을 뿐이었다. (사실 다이어트 중이었다.)<br>
+<br>
+그래서 친구랑 학원을 탈출했다!!!<br>
+물론 몰래 나온건 아니었다. 싹싹 빌었다.<br>
+<br>
+그날 친구와 바로 치킨을 먹으러 갔다.<br>
+<br>
+그날 먹었던 치킨은 내 인생 최고의 치킨이었다.<br> 
+<br>
+모두들 이런 의미있는 음식 하나쯤은 있지 않은가<br>
+평소와 같은 음식이지만 유독 더 맛있게 느껴지는...</h4>
+<br>
+<h2><s>치킨, 그거 어떻게 안좋아 하는데.</s></h2>
+<img class="img1" src="3-1.jpg" alt="">
+<video class="vid2" src="2-2.mp4" autoplay muted loop playsinline></video>
+  </div>
+</body>
+</html>

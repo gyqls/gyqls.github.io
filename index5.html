@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 위 메뉴</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    
+    .item-bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url('./p5.png') center/cover no-repeat;
+      z-index: 0; 
+    }
+
+    
+    .menu {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      z-index: 10; 
+    }
+
+    .menu a {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 2px solid #F5F3EE;
+      border-radius: 50px;
+      color: #F5F3EE;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+  
+    .bottom-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      border: 2px solid #F5F3EE;
+      border-radius: 50px;
+      padding: 8px 22px;
+      font-size: 18px;
+      color: #F5F3EE;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      z-index: 10; 
+    }
+
+    .bottom-btn:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    h4 {
+  position: absolute;
+  top: 32%;            
+  left: 10%;           
+  width: 40%;          
+  font-size: 14px;
+  line-height: 1.6;   
+  color: #F5F3EE;         
+  font-weight: 450;
+  z-index: 10;         
+}
+
+.img1 {
+  position: absolute;
+  top: 25%;           
+  left: 47.5%;         
+  width: 383px;       
+  height: 510px;      
+  object-fit: cover;  
+  border: none;
+  z-index: 5;
+}
+
+.img2 {
+  position: absolute;
+  top: 25%;           
+  left: 72%;         
+  width: 383px;       
+  height: 510px;      
+  object-fit: cover;  
+  border: none;
+  z-index: 5;
+}
+
+  </style>
+</head>
+<body>
+  <div class="item-bg">
+   <div class="item-bg">
+    <nav class="menu">
+      <a href="index2.html">Beginning</a>
+      <a href="index3.html">First Steps</a>
+      <a href="index4.html">Journey1</a>
+      <a href="index5.html">Journey2</a>
+      <a href="index6.html">Yet to come</a>
+    </nav>
+
+    <a href="index.html" class="bottom-btn">main →</a>
+    <h4> 20살이 되는 2025년!<br>
+12시 땡 하자마자 친구들과 처음 술을 마시러 갔다.<br>
+처음 마셔 보는 술에 잔뜩 신이 났었던 기억이 있다. <br>
+<br>
+기대 했던 것과는 달리 전혀 맛이 없었다.<br> 
+어른들이 마시면 크~~시원하다~라는 기분도 들지 않았다.<br> 
+그럼에도 불구하고 기분이 굉장히 들떠있었던 기억이 있다.<br> 
+<br>
+지금 생각해 보면 술을 마셔서 신나는 것이 아니라<br> 
+어른이 되었다는 느낌에 설레서 들떠 있었던 것이 아닌가 싶다.<br> 
+<br>
+2025년의 10월, 처음이자 마지막의 20살을 2개월 남겨둔 지금<br>
+어른이 되어도 달라지는건 딱히 없다는걸 느낀다.<br>
+<br>
+그저 고등학생때는 숙제와 학원의 노예 였다면<br> 
+성인이 된 지금은 과제와 알바의 노예로 진화한것뿐..<br>
+<br>
+20살의 첫 시작을 가장 좋아하는 사람들과 있다는 생각,<br>
+성인이 되면 하루하루를 알차고 새롭게 보낼거라 생각했던 시기였기에<br> 
+더욱 들떠있던 순간이었다!</h4>
+<br>
+<img class="img1" src="2-1.jpg" alt="">
+<img class="img2" src="5-2.jpg" alt="">
+
+  </div>
+</body>
+</html>
