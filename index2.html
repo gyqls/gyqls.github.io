@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 위 메뉴</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      font-weight: 600;
+    }
+
+    /* 배경 */
+    .item-bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url('p2.png') center/cover no-repeat;
+      z-index: 0; 
+    }
+    .menu {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      z-index: 10; 
+    }
+
+    .menu a {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 2px solid #F5F3EE;
+      border-radius: 50px;
+      color: #F5F3EE;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 300;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* 오른쪽 하단 버튼 */
+    .bottom-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      border: 2px solid #F5F3EE;
+      border-radius: 50px;
+      padding: 8px 22px;
+      font-size: 18px;
+      color: #F5F3EE;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      z-index: 10; 
+    }
+
+    .bottom-btn:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    table, tr, th, td {
+            border: solid 2px #2D2D2D;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+    
+    .bucket-table {
+  position: absolute;
+  top: 50%;              
+  left: 50%;              
+  transform: translate(-50%, -5%); 
+  width: 500px;           
+  border-collapse: collapse;
+  background-color: #F5F3EE;
+  font-size: 18px;
+  text-align: center;
+}
+
+.bucket-table th, .bucket-table td {
+  border: 1px solid #333;
+  padding: 10px;
+  vertical-align: middle; 
+}
+
+h2 {
+  position: absolute;
+  top: 15%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  color: #F5F3EE;            
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+  z-index: 5;             
+}
+
+p {
+  position: absolute;
+  top: 20%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  color: #F5F3EE;            
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  z-index: 5;             
+}
+  </style>
+</head>
+<body>
+  <div class="item-bg">
+    <nav class="menu">
+      <a href="index2.html">Beginning</a>
+      <a href="index3.html">First Steps</a>
+      <a href="index4.html">Journey1</a>
+      <a href="index5.html">Journey2</a>
+      <a href="index6.html">Yet to come</a>
+    </nav>
+    <h2>Beginning</h2>
+    <p>- 제가 만든 버킷리스트를 소개합니다! -</p>
+
+    <a href="index.html" class="bottom-btn">main →</a>
+
+    <table class="bucket-table">
+      <tr>
+        <th rowspan="1">번호</th><th colspan="1">버킷리스트</th><th colspan="1">달성여부</th>
+      </tr>
+    <tr>
+      <td>1</td><td>친구들과 인생네컷 시리즈 만들기</td><td><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>2</td><td>학원 탈출하기</td><td><input type="checkbox"></td>
+    </tr>
+     <tr>
+      <td>3</td><td>2025.01.01에 친구들과 술마시기</td><td><input type="checkbox"></td>
+    </tr>
+     <tr>
+      <td>4</td><td>수능끝나고 친구들과 여행 다녀오기</td><td><input type="checkbox"></td>
+    </tr>
+     <tr>
+      <td>5</td><td>알바시작하고 첫 월급 받기</td><td><input type="checkbox"></td>
+    </tr>
+     <tr>
+      <td>6</td><td>머리 숏컷으로 잘라보기</td><td><input type="checkbox"></td>
+    </tr>
+     <tr>
+      <td>7</td><td>스노우보드 타면서 공중제비 돌기</td><td><input type="checkbox"></td>
+    </tr>
+     <tr>
+      <td>8</td><td>1년에 책 30권 읽고 독후감 모음집 만들기</td><td><input type="checkbox"></td>
+    </table>
+  </div>
+</body>
+</html>
+

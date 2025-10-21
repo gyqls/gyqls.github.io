@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 위 메뉴</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 배경 */
+    .item-bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url('p3.png') center/cover no-repeat;
+      z-index: 0; /* 배경은 가장 아래 */
+    }
+
+    /* 상단 메뉴 */
+    .menu {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      z-index: 10; /* 배경 위로 올림 ✅ */
+    }
+
+    .menu a {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 2px solid #F5F3EE;
+      border-radius: 50px;
+      color: #F5F3EE;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* 오른쪽 하단 버튼 */
+    .bottom-btn {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+      border: 2px solid #F5F3EE;
+      border-radius: 50px;
+      padding: 8px 22px;
+      font-size: 18px;
+      color: #F5F3EE;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      z-index: 10; /* 배경 위로 올림 ✅ */
+    }
+
+    .bottom-btn:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      
+    }
+
+    h2 {
+  position: absolute;
+  top: 15%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  color: #F5F3EE;            
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+  z-index: 5;             
+}
+
+p {
+  position: absolute;
+  top: 20%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  color: #F5F3EE;            
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  z-index: 5;         
+      
+}
+
+.img1, .img3, .img4, .vid2 {
+  width: 260px;          /* 이미지/비디오 크기 */
+  height: 410px;
+  object-fit: cover;     /* 내용이 박스에 꽉 차도록 */
+  position: absolute;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  z-index: 10; 
+  transition: opacity 0.3s ease;
+}
+
+img:hover {
+opacity: 0.7;             /* 반투명하게 */
+  filter: brightness(0.8); 
+}
+
+/* 각각의 가로 위치만 조정 */
+.img1 { left: 18%; }
+.vid2 { left: 39.5%; }  /* ✅ 비디오의 클래스명은 .vid2 */
+.img3 { left: 61%; }
+.img4 { left: 82%; }
+
+h4 {
+  position: absolute;
+  top: 81%;                 /* 🔹 이미지 아래쪽 위치 (필요시 조정: 78~83%) */
+  transform: translate(-50%, 0);
+  color: #F5F3EE;           /* 글자색 (배경에 맞게 조정 가능) */
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  width: 250px;             /* 글자영역 폭 (이미지 폭과 맞게) */
+}
+
+/* 각 h4 개별 위치 (이미지와 간격 맞추기) */
+h4:nth-of-type(1) { left: 18%; }
+h4:nth-of-type(2) { left: 39.5%; }
+h4:nth-of-type(3) { left: 61%; }
+h4:nth-of-type(4) { left: 82%; }
+
+h6 {
+  position: absolute;
+  top: 84%;                 /* 🔹 이미지 아래쪽 위치 (필요시 조정: 78~83%) */
+  transform: translate(-50%, 0);
+  color: #F5F3EE;           /* 글자색 (배경에 맞게 조정 가능) */
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  width: 250px;             /* 글자영역 폭 (이미지 폭과 맞게) */
+}
+
+/* 각 h4 개별 위치 (이미지와 간격 맞추기) */
+h6:nth-of-type(1) { left: 18%; }
+h6:nth-of-type(2) { left: 39.5%; }
+h6:nth-of-type(3) { left: 61%; }
+h6:nth-of-type(4) { left: 82%; }
+  </style>
+</head>
+<body>
+ <div class="item-bg">
+    <nav class="menu">
+      <a href="index2.html">Beginning</a>
+      <a href="index3.html">First Steps</a>
+      <a href="index4.html">Journey1</a>
+      <a href="index5.html">Journey2</a>
+      <a href="index6.html">Yet to come</a>
+    </nav>
+
+    <a href="index.html" class="bottom-btn">main →</a>
+  <h2>First Steps</h2>
+    <p>- 제가 도전해본 버킷리스트를 소개합니다! -</p>
+<img class="img1" src="2-1.jpg" alt="">
+<video class="vid2" src="2-2.mp4" autoplay muted loop playsinline></video>
+<img class="img3" src="2-3.jpg" alt="">
+<img class="img4" src="2-4.jpg" alt="">
+<h4>1. 2025.01.01일 친구들과 술마시기</h4>
+<h4>2. 학원 탈출하기</h4>
+<h4>3. 수능 끝나고 친구들과 여행</h4>
+<h4>4. 알바 시작하고 첫 월급 받기</h4>
+<h6>20살이 되는 2025년!<br>12시 땡 하자마자 친구들과 술을...</h6>
+<h6>지긋지긋한 학원에서<br>탈출해서 떡볶이 먹으러...</h6>
+<h6>입시 끝나자마자 친구들과 서울여행 다녀오기!</h6>
+<h6>편의점 알바 VS 버거킹 알바,<br>어느 하나 쉬운게 없소..</h6>
+  </div>
+</body>
+</html>
